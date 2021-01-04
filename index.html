@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Vue Mobile Table Demo</title>
+    <link rel="stylesheet" href="./css/public.css" />
+    <!-- import complex-table css -->
+    <link rel="stylesheet" href="./css/vue-component/complx-table.css" />
+    <script src="./js/amfe-flexible.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="app-main">
+        <!-- table -->
+        <complx-table :column="column" :list="list">
+          <template #id="{value}"> {{value}} </template>
+          <template #column="{value}"> {{value}} </template>
+          <template #column1="{value}"> {{value}} </template>
+          <template #column2="{value}"> {{value}} </template>
+          <template #column3="{value}"> {{value}} </template>
+          <template #column4="{value}"> {{value}} </template>
+          <template #column5="{value}"> {{value}} </template>
+          <template #column6="{value}"> {{value}} </template>
+        </complx-table>
+      </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/async/3.2.0/async.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/promise-polyfill/8.2.0/polyfill.min.js"></script>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/iscroll-probe.js"></script>
+    <!-- import complex-table -->
+    <script src="./js/vue-component/complx-table.js"></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          column: [
+            [
+              {
+                fieldName: "id",
+                name: "Merge 1 Row & 3 Column",
+                colspan: 1, // Specify the number of columns that the cell spans across
+                rowspan: 3, // Specify the number of rows that the cell spans vertically
+              },
+              {
+                fieldName: "custom_field",
+                name: "Merge 2 Column",
+                colspan: 2,
+                rowspan: 1,
+              },
+              {
+                fieldName: "custom_field",
+                name: "Merge 2 Column",
+                colspan: 2,
+                rowspan: 1,
+              },
+              {
+                fieldName: "custom_field",
+                name: "Merge 3 Column",
+                colspan: 3,
+                rowspan: 1,
+              },
+            ],
+            [
+              {
+                fieldName: "custom_field",
+                name: "default",
+                colspan: 1, // Specify the number of columns that the cell spans across
+                rowspan: 1, // Specify the number of rows that the cell spans vertically
+              },
+              {
+                fieldName: "custom_field",
+                name: "Merge 2 Column",
+                colspan: 2,
+                rowspan: 1,
+              },
+              {
+                fieldName: "custom_field",
+                name: "Merge 2 Column",
+                colspan: 2,
+                rowspan: 1,
+              },
+              {
+                fieldName: "custom_field",
+                name: "Merge 3 Column",
+                colspan: 3,
+                rowspan: 1,
+              },
+            ],
+            [
+              {
+                fieldName: "column",
+                name: "default",
+                colspan: 1, // Specify the number of columns that the cell spans across
+                rowspan: 1, // Specify the number of rows that the cell spans vertically
+              },
+              {
+                fieldName: "column1",
+                name: "default",
+                colspan: 1,
+                rowspan: 1,
+              },
+              {
+                fieldName: "column2",
+                name: "default",
+                colspan: 1,
+                rowspan: 1,
+              },
+              {
+                fieldName: "column3",
+                name: "default",
+                colspan: 1,
+                rowspan: 1,
+              },
+              {
+                fieldName: "column4",
+                name: "default",
+                colspan: 1,
+                rowspan: 1,
+              },
+              {
+                fieldName: "column5",
+                name: "default",
+                colspan: 1,
+                rowspan: 1,
+              },
+              {
+                fieldName: "column6",
+                name: "default",
+                colspan: 1,
+                rowspan: 1,
+              },
+            ],
+          ],
+          list: [
+            {
+              id: 100007,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100008,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100009,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100010,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100011,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100012,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100013,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100014,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100015,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100016,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100017,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100018,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100019,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100020,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100021,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100022,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100023,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100024,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100025,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+            {
+              id: 100026,
+              column: "mock data",
+              column1: "mock data1",
+              column2: "mock data2",
+              column3: "mock data3",
+              column4: "mock data4",
+              column5: "mock data5",
+              column6: "mock data6",
+            },
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

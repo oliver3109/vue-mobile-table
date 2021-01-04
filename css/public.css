@@ -1,0 +1,121 @@
+html {
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
+    Segoe UI, Arial, Roboto, PingFang SC, Hiragino Sans GB, Microsoft Yahei,
+    sans-serif;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: initial;
+}
+
+div {
+  -webkit-font-smoothing: antialiased;
+}
+
+dd,
+div,
+dt,
+li,
+span {
+  cursor: pointer;
+}
+
+#app {
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+#app .app-main {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  overflow: hidden;
+  max-width: 540px;
+  margin: 0 auto;
+}
